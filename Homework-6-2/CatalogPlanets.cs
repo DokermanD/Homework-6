@@ -9,7 +9,7 @@ namespace Homework_6_2
     public class CatalogPlanets
     {
         //Список для хранения планет
-        List<Planet> planets = new List<Planet>();
+        public List<Planet> planets = new List<Planet>();
         
         public CatalogPlanets()
         {
@@ -17,16 +17,19 @@ namespace Homework_6_2
             Venera.NamePlanet = "Венера";
             Venera.PlanetNumber = 2;
             Venera.LengthPlanetEquator = 38025;
+            Venera.LinkPreviousPlanet = null;
 
             Planet Zemlia = new Planet();
             Zemlia.NamePlanet = "Земля";
             Zemlia.PlanetNumber = 3;
             Zemlia.LengthPlanetEquator = 40075;
+            Zemlia.LinkPreviousPlanet = Venera;
 
             Planet Mars = new Planet();
             Mars.NamePlanet = "Марс";
             Mars.PlanetNumber = 4;
             Mars.LengthPlanetEquator = 21344;
+            Mars.LinkPreviousPlanet = Zemlia;
 
             planets.Add(Venera);
             planets.Add(Zemlia);
@@ -35,7 +38,7 @@ namespace Homework_6_2
 
         //Счётчик вызова метода
         int schet = 0;
-        public (int Number, int LengthPlanetEquator, string ) GetPlanet(string planetName)
+        public (int Number, int LengthPlanetEquator, string) GetPlanet(string planetName)
         {
             schet++;
 

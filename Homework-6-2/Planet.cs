@@ -11,7 +11,7 @@ namespace Homework_6_2
         public string NamePlanet { get; set; }
         public int PlanetNumber { get; set; }
         public int LengthPlanetEquator { get; set; }
-        public string LinkPreviousPlanet { get; set; }
+        public Planet LinkPreviousPlanet { get; set; }
 
     }
 }
