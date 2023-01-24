@@ -11,7 +11,7 @@ namespace Homework_6_2
 
             var namePlanets = new string[] { "Земля", "Лимония", "Марс" };
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < namePlanets.Length; i++)
             {
                 var rezalt = catalogPlanets.GetPlanet(namePlanets[i]);
 
